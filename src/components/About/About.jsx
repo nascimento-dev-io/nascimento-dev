@@ -45,7 +45,7 @@ const About = () => {
           <p>
             Olá, me chamo Jorge Nascimento, tenho {age} anos e moro em São
             Paulo, sou desenvolvedor front-end em formação, buscando evoluir
-            todos os dias estudando a stack voltadas para as tecnologias como
+            todos os dias estudando a stack voltada para as tecnologias como
             React, React-DOM, Styled Components, Context API, entre outras do
             ecosistema React.
           </p>
