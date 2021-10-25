@@ -1,13 +1,95 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+
+  list-style: none;
+  text-decoration: none;
+
+  scroll-behavior: smooth;
+
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --primary-color: #2b3443;
+  --secondary-color: #f2220f;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+section {
+  width: 100vw;
+  min-height: 100vh;
+
+  padding: 90px 10vw 0;
+
+  overflow: hidden;
+
+  background: linear-gradient(to bottom, #2b3443, #35435a, #2b3443);
+}
+
+@media (max-width: 750px) {
+  section {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  :root {
+    font-size: 20px;
+  }
+}
+
+/* Class - Animations */
+
+@keyframes pulse {
+  to {
+    opacity: 0.5;
+  }
+}
+
+.pulse {
+  animation: pulse 1.5s ease infinite alternate;
+}
+
+@keyframes fadeInToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: initial;
+    transform: initial;
+  }
+}
+
+.fade-in-to-left {
+  animation: fadeInToLeft 0.5s ease-out forwards;
+}
+
+@keyframes fadeInToRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: initial;
+    transform: initial;
+  }
+}
+
+.fade-in-to-right {
+  animation: fadeInToRight 0.5s ease-out forwards;
 }

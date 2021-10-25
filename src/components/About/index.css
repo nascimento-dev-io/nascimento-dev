@@ -1,0 +1,108 @@
+#about {
+  box-shadow: 0 2px 3px var(--secondary-color);
+}
+
+.about-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 30px;
+}
+
+.about-card {
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+}
+
+.about-card .card {
+  width: 220px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .image {
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 8px white, 0 0 0 4px var(--secondary-color);
+
+  background-image: url("../../assets/images/perfil.jpg");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  transition: all 0.8s;
+}
+
+.card .image:hover {
+  transform: scale(1.05);
+}
+
+.card p {
+  margin: 15px 0;
+  font-size: 1.2rem;
+
+  /* font-family: "Source Code Pro", monospace; */
+}
+
+.card .social-media {
+  width: 70%;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.card .social-media a {
+  color: var(--secondary-color);
+
+  font-size: 1.5rem;
+
+  opacity: 0.8;
+}
+
+.card .social-media svg {
+  cursor: pointer;
+}
+
+.about-content {
+  min-width: 350px;
+  width: 50%;
+}
+
+.about-content p {
+  width: 100%;
+
+  font-size: 0.925rem;
+
+  margin: 15px 0;
+
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 700px) {
+  .about-content-wrapper {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .about-content {
+    margin-top: 30px;
+  }
+
+  .about-content h3,
+  .about-content p {
+    width: 90%;
+
+    text-align: center;
+
+    margin-inline: auto;
+  }
+}

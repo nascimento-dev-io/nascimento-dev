@@ -1,0 +1,28 @@
+#skill {
+  height: calc(50vh + 90px);
+}
+#skill nav {
+  height: 150px;
+}
+
+#skill nav ul {
+  height: 100%;
+
+  margin-top: 50px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 650px) {
+  #skill {
+    height: auto;
+  }
+
+  #skill nav {
+    height: auto;
+  }
+}

@@ -1,0 +1,188 @@
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+
+  width: 230px;
+  height: 250px;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  position: relative;
+
+  box-shadow: 0 0 5px var(--secondary-color);
+}
+
+.card-wrapper .card-front,
+.card-wrapper .card-back {
+  width: 100%;
+  height: 100%;
+
+  padding: 5px;
+
+  position: absolute;
+  top: 0;
+}
+
+.card-wrapper .card-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  color: white;
+
+  border-top: 5px solid var(--secondary-color);
+
+  transform: translateY(-5px);
+}
+
+.card-back .technoligies {
+  height: 40%;
+
+  margin-top: 10px;
+
+  text-align: center;
+}
+
+.card-back .technoligies h5 {
+  font-size: 1rem;
+}
+
+.technoligies .tech-tags {
+  display: flex;
+  justify-content: space-around;
+
+  gap: 10px 5px;
+
+  flex-wrap: wrap;
+
+  padding: 15px 5px;
+}
+
+.technoligies .tech-tags .tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 0.7rem;
+  font-weight: 500;
+
+  padding: 5px 7px 6px;
+
+  border-radius: 5px;
+  box-shadow: 0 0 3px var(--secondary-color);
+
+  border: 1.5px solid var(--secondary-color);
+}
+
+.card-back .card-button a {
+  color: white;
+}
+
+.card-wrapper .card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #2b3444;
+
+  transition: all 1s;
+
+  animation: moveInitial 1s forwards;
+}
+
+.card-front .card-image {
+  width: 100%;
+  height: 50%;
+
+  overflow: hidden;
+
+  border-radius: 5px;
+}
+
+.card-front .card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 1s;
+}
+
+.card-front .card-image img:hover {
+  transform: scale(1.15);
+}
+
+.card-front .card-content {
+  min-height: 50px;
+  text-align: center;
+}
+
+.card-front .card-content h5 {
+  font-size: 1rem;
+
+  margin: 10px 0;
+}
+
+.card-front .card-content p {
+  font-size: 0.7rem;
+
+  text-align: center;
+
+  width: 95%;
+  margin: 0 auto;
+}
+
+.card-wrapper .card-button {
+  font-size: 0.852rem;
+
+  background-color: transparent;
+
+  text-align: center;
+  margin: 12px auto;
+
+  color: white;
+  font-weight: 700;
+
+  padding: 8px 10px;
+
+  width: 80%;
+
+  border-radius: 5px;
+
+  border: 1px solid var(--secondary-color);
+
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+
+.card-wrapper .card-button:hover {
+  background-color: #27364e;
+}
+
+.card-wrapper .card-front.anime {
+  animation: moveLeft 1s forwards;
+}
+.card-wrapper .card-back {
+  background-color: #1c2c46;
+}
+
+@keyframes moveLeft {
+  to {
+    transform: translateX(230px);
+    opacity: 0;
+  }
+}
+
+@keyframes moveInitial {
+  from {
+    transform: translateX(-230px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}

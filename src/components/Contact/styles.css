@@ -1,0 +1,81 @@
+#contact {
+  min-height: 80vh;
+}
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 50px auto;
+}
+
+.contact-wrapper p {
+  font-size: 1.2rem;
+
+  opacity: 0.8;
+
+  margin-bottom: 20px;
+}
+
+.contacts {
+  max-width: 420px;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.contacts div {
+  padding: 10px;
+
+  flex-basis: 200px;
+
+  box-shadow: 0 0 2px;
+
+  border-radius: 5px;
+
+  opacity: 0.8;
+
+  transition: 0.5s;
+}
+
+.contacts div:hover {
+  opacity: 1;
+}
+
+.contacts div a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0 5px;
+
+  color: white;
+
+  font-weight: 500;
+
+  padding: 5px;
+}
+
+.contacts div a svg {
+  font-size: 1.5rem;
+}
+.contacts .whatsapp {
+  background-color: #3dc14f;
+}
+
+.contacts .linkdin {
+  background-color: #0a66c2;
+}
+
+.contacts .github {
+  background-color: #161b22;
+}
+
+.contacts .email {
+  background-color: #ea4335;
+}

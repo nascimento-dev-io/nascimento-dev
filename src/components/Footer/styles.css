@@ -1,0 +1,19 @@
+footer {
+  height: 60px;
+
+  background-color: #181f30;
+
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.footer-content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0.5;
+  font-size: 0.8rem;
+
+  gap: 0 5px;
+}

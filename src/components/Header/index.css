@@ -1,0 +1,271 @@
+header {
+  width: 100vw;
+  height: 90px;
+
+  padding: 0 10vw;
+
+  background-color: var(--primary-color);
+
+  box-shadow: 0 1px 5px var(--secondary-color);
+
+  margin-inline: auto;
+
+  position: fixed;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.2rem;
+
+  font-family: "Source Code Pro", monospace;
+
+  font-weight: 700;
+
+  display: flex;
+
+  align-items: center;
+
+  color: var(--secondary-color);
+}
+
+.logo span {
+  display: block;
+
+  opacity: 0;
+
+  margin: 2px;
+
+  color: white;
+
+  animation: fadeInToLeft 0.5s ease-out forwards;
+}
+
+.logo span:nth-child(1) {
+  animation-delay: 100ms;
+}
+.logo span:nth-child(1) {
+  animation-delay: 200ms;
+}
+.logo span:nth-child(1) {
+  animation-delay: 300ms;
+}
+.logo span:nth-child(2) {
+  animation-delay: 400ms;
+}
+.logo span:nth-child(3) {
+  animation-delay: 500ms;
+}
+.logo span:nth-child(4) {
+  animation-delay: 600ms;
+}
+.logo span:nth-child(5) {
+  animation-delay: 700ms;
+}
+.logo span:nth-child(6) {
+  animation-delay: 800ms;
+}
+.logo span:nth-child(7) {
+  animation-delay: 900ms;
+}
+.logo span:nth-child(8) {
+  animation-delay: 1000ms;
+}
+.logo span:nth-child(9) {
+  animation-delay: 1100ms;
+}
+.logo span:nth-child(10) {
+  animation-delay: 1200ms;
+}
+.logo span:nth-child(11) {
+  animation-delay: 1300ms;
+}
+.logo span:nth-child(12) {
+  animation-delay: 1400ms;
+}
+.logo span:nth-child(13) {
+  animation-delay: 1500ms;
+}
+.logo span:nth-child(14) {
+  animation-delay: 1600ms;
+}
+.logo span:nth-child(15) {
+  animation-delay: 1700ms;
+}
+.logo span:nth-child(16) {
+  animation-delay: 1800ms;
+}
+.logo span:nth-child(17) {
+  animation-delay: 1900ms;
+}
+.logo span:nth-child(18) {
+  animation-delay: 2000ms;
+}
+.logo span:nth-child(19) {
+  animation-delay: 2100ms;
+}
+
+.logo span:first-child,
+.logo span:last-child {
+  color: orangered;
+}
+
+.logo span {
+  text-shadow: 0 0 3px var(--secondary-color);
+}
+
+.mobile-menu {
+  width: 30px;
+  height: 20px;
+
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-menu > span {
+  display: block;
+
+  width: 100%;
+  height: 3px;
+
+  background-color: var(--secondary-color);
+}
+
+.menu ul {
+  display: flex;
+
+  color: white;
+
+  font-size: 1.1rem;
+
+  list-style: none;
+
+  opacity: 0;
+
+  animation-delay: 1000ms;
+}
+
+.menu li a {
+  display: block;
+
+  padding: 5px 10px;
+
+  margin: 5px;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.5s;
+
+  position: relative;
+}
+
+.menu li a::before {
+  content: "";
+
+  width: 0px;
+  height: 2px;
+
+  background-color: var(--secondary-color);
+
+  position: absolute;
+  bottom: 0;
+
+  transition: 0.3s;
+}
+
+.menu li a:hover::before {
+  width: 20px;
+}
+
+.menu li a:hover {
+  text-shadow: 0 0 2px var(--secondary-color);
+}
+
+.menu .close {
+  height: 30px;
+
+  display: flex;
+  justify-content: flex-end;
+
+  font-size: 1.1rem;
+}
+
+.close span {
+  width: 35px;
+  height: 35px;
+
+  font-size: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  background-color: var(--secondary-color);
+}
+
+@media screen and (max-width: 800px) {
+  .mobile-menu {
+    display: flex;
+
+    cursor: pointer;
+  }
+
+  .menu {
+    width: 100vw;
+    height: 100vh;
+
+    display: none;
+    justify-content: flex-end;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .menu ul {
+    width: 50vw;
+    height: 100vh;
+
+    padding: 20px;
+
+    background-color: rgb(139, 42, 4);
+
+    flex-direction: column;
+  }
+
+  .menu ul a {
+    margin: 8px 0;
+  }
+
+  .menu li a::before {
+    display: none;
+  }
+
+  .menu.mobile {
+    display: flex;
+  }
+
+  .menu.mobile-menu li {
+    transition: 0.5s;
+
+    margin: 5px 0;
+  }
+
+  .menu.mobile li:hover {
+    background-color: rgb(223, 91, 74);
+
+    border-radius: 8px;
+  }
+}
