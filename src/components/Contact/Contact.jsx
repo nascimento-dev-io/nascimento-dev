@@ -1,12 +1,6 @@
 import React from "react";
 import HeaderSection from "../HeaderSection/HeaderSection";
-import {
-  FaEnvelope,
-  FaGithub,
-  FaLinkedinIn,
-  FaSmileWink,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 import "./styles.css";
 
