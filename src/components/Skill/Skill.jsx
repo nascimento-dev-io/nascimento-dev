@@ -55,9 +55,9 @@ const Skill = () => {
       <nav>
         {anime && (
           <ul>
-            {Skills.map((skill, i) => {
-              return <TechSkill skill={skill} delay={150 * i} />;
-            })}
+            {Skills.map((skill, i) => (
+              <TechSkill key={i} skill={skill} delay={150 * i} />
+            ))}
           </ul>
         )}
       </nav>

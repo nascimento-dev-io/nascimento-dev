@@ -49,10 +49,6 @@ const Projects = () => {
   const scrollHeight = useContext(ScrollContext);
   const [anime, setAnime] = useState(false);
 
-  useEffect(() => {
-    console.dir(widthSlide.current);
-  }, []);
-
   function slideMoveLeft() {
     widthSlide.current.scrollLeft -= widthSlide.current.offsetWidth;
   }
