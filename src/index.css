@@ -67,7 +67,7 @@ section {
 @keyframes fadeInToLeft {
   from {
     opacity: 0;
-    transform: translateX(20px);
+    transform: translateX(40px);
   }
   to {
     opacity: initial;
@@ -76,13 +76,13 @@ section {
 }
 
 .fade-in-to-left {
-  animation: fadeInToLeft 0.5s ease-out forwards;
+  animation: fadeInToLeft 0.8s ease forwards;
 }
 
 @keyframes fadeInToRight {
   from {
     opacity: 0;
-    transform: translateX(-20px);
+    transform: translateX(-40px);
   }
   to {
     opacity: initial;
@@ -91,5 +91,5 @@ section {
 }
 
 .fade-in-to-right {
-  animation: fadeInToRight 0.5s ease-out forwards;
+  animation: fadeInToRight 0.8s ease forwards;
 }

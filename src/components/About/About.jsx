@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { FaRegEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import { useState } from "react/cjs/react.development";
+import { ScrollContext } from "../../Context";
 import HeaderSection from "../HeaderSection/HeaderSection";
 import "./index.css";
 
 const About = () => {
   const age = new Date().getFullYear() - 1989;
+  const refSectionAbout = useRef();
+  const scrollHeight = useContext(ScrollContext);
+  const [anime, setAnime] = useState(false);
+
+  useEffect(() => {
+    const animation = refSectionAbout.current.getBoundingClientRect().top;
+    if (animation < 400) setAnime(true);
+  }, [scrollHeight]);
+
   return (
-    <section id="about">
+    <section id="about" ref={refSectionAbout}>
       <HeaderSection>Sobre</HeaderSection>
       <div className="about-content-wrapper">
-        <div className="about-card">
+        <div className={`about-card ${anime ? "fade-in-to-left" : ""}`}>
           <div className="card">
             <div className="image"></div>
             <p>Jorge Nascimento</p>
@@ -40,7 +51,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="about-content">
+        <div className={`about-content ${anime ? "fade-in-to-right" : ""}`}>
           <h3>Conheça um pouco sobre mim</h3>
           <p>
             Olá, me chamo Jorge Nascimento, tenho {age} anos e moro em São

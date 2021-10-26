@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import HeaderSection from "../HeaderSection/HeaderSection";
+import { ScrollContext } from "../../Context";
 
 import "./styles.css";
 import CardProject from "../CardProject/CardProject";
@@ -40,13 +41,23 @@ const projects = [
 ];
 
 const Projects = () => {
+  const refSectionProject = useRef();
+  const scrollHeight = useContext(ScrollContext);
+  const [anime, setAnime] = useState(false);
+
+  useEffect(() => {
+    const animation = refSectionProject.current.getBoundingClientRect().top;
+    if (animation < 400) setAnime(true);
+  }, [scrollHeight]);
+
   return (
-    <section id="projects">
+    <section ref={refSectionProject} id="projects">
       <HeaderSection>Projetos</HeaderSection>
       <div className="projects">
-        {projects.map((project, i) => (
-          <CardProject key={i} project={project} />
-        ))}
+        {anime &&
+          projects.map((project, i) => (
+            <CardProject key={i} project={project} delay={300 * i} />
+          ))}
       </div>
     </section>
   );

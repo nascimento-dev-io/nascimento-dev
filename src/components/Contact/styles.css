@@ -66,16 +66,20 @@
 }
 .contacts .whatsapp {
   background-color: #3dc14f;
+  opacity: 0;
 }
 
 .contacts .linkdin {
   background-color: #0a66c2;
+  opacity: 0;
 }
 
 .contacts .github {
   background-color: #161b22;
+  opacity: 0;
 }
 
 .contacts .email {
   background-color: #ea4335;
+  opacity: 0;
 }

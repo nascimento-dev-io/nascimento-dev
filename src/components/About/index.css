@@ -13,8 +13,9 @@
   height: 100%;
 
   display: flex;
-
   align-items: center;
+
+  opacity: 0;
 }
 
 .about-card .card {
@@ -76,6 +77,8 @@
 .about-content {
   min-width: 350px;
   width: 50%;
+
+  opacity: 0;
 }
 
 .about-content p {

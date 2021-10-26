@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 
-const CardProject = ({ project }) => {
+const CardProject = ({ project, delay }) => {
   const [anime, setAnime] = React.useState(false);
 
   const { name, tecnologies, link, image, description } = project;
@@ -11,7 +11,12 @@ const CardProject = ({ project }) => {
   }
 
   return (
-    <div className="card-wrapper fade-in-to-left">
+    <div
+      className="card-wrapper fade-in-to-left"
+      style={{
+        animationDelay: `${delay}ms`,
+      }}
+    >
       <div
         className={`card-back ${!anime ? "anime" : ""}`}
         onMouseLeave={handleClick}
