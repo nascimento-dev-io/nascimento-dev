@@ -5,6 +5,8 @@ import { ScrollContext } from "../../Context";
 import "./styles.css";
 import CardProject from "../CardProject/CardProject";
 
+import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+
 const projects = [
   {
     name: "TODO App",
@@ -42,8 +44,22 @@ const projects = [
 
 const Projects = () => {
   const refSectionProject = useRef();
+  const widthSlide = useRef();
+
   const scrollHeight = useContext(ScrollContext);
   const [anime, setAnime] = useState(false);
+
+  useEffect(() => {
+    console.dir(widthSlide.current);
+  }, []);
+
+  function slideMoveLeft() {
+    widthSlide.current.scrollLeft -= widthSlide.current.offsetWidth;
+  }
+
+  function slideMoveRight() {
+    widthSlide.current.scrollLeft += widthSlide.current.offsetWidth;
+  }
 
   useEffect(() => {
     const animation = refSectionProject.current.getBoundingClientRect().top;
@@ -53,11 +69,23 @@ const Projects = () => {
   return (
     <section ref={refSectionProject} id="projects">
       <HeaderSection>Projetos</HeaderSection>
-      <div className="projects">
-        {anime &&
-          projects.map((project, i) => (
-            <CardProject key={i} project={project} delay={300 * i} />
-          ))}
+
+      <div ref={widthSlide} className="projects-carrousel">
+        <div className="projects-wrapper">
+          {anime &&
+            projects.map((project, i) => (
+              <CardProject key={i} project={project} delay={200 * i} />
+            ))}
+        </div>
+      </div>
+
+      <div className="buttons">
+        <button onClick={slideMoveLeft} className="btn-prev">
+          <FaArrowCircleLeft />
+        </button>
+        <button onClick={slideMoveRight} className="btn-next">
+          <FaArrowCircleRight />
+        </button>
       </div>
     </section>
   );

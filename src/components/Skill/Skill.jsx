@@ -56,7 +56,7 @@ const Skill = () => {
         {anime && (
           <ul>
             {Skills.map((skill, i) => {
-              return <TechSkill key={i} skill={skill} delay={150 * i} />;
+              return <TechSkill skill={skill} delay={150 * i} />;
             })}
           </ul>
         )}
