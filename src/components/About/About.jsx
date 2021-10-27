@@ -1,19 +1,21 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect, useState, useRef } from "react";
 import { FaRegEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
-import { useState } from "react/cjs/react.development";
+
 import { ScrollContext } from "../../Context";
 import HeaderSection from "../HeaderSection/HeaderSection";
 import "./index.css";
 
 const About = () => {
-  const age = new Date().getFullYear() - 1989;
+  const age = new Date().getFullYear() - 1990;
   const refSectionAbout = useRef();
   const scrollHeight = useContext(ScrollContext);
-  const [anime, setAnime] = useState(false);
+  const [anime, setAnime] = useState(null);
 
   useEffect(() => {
     const animation = refSectionAbout.current.getBoundingClientRect().top;
-    if (animation < 400) setAnime(true);
+    if (animation < 400) {
+      setAnime(true);
+    }
   }, [scrollHeight]);
 
   return (
