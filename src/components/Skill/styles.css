@@ -7,6 +7,7 @@
 
 #skill nav ul {
   height: 100%;
+  height: auto;
 
   margin-top: 50px;
 
@@ -25,4 +26,36 @@
   #skill nav {
     height: auto;
   }
+}
+
+.tech {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 130px;
+  height: 150px;
+
+  opacity: 0;
+
+  padding: 5px;
+
+  color: whitesmoke;
+}
+
+.tech-title {
+  display: block;
+
+  text-align: center;
+
+  font-size: 0.8rem;
+
+  font-weight: 500;
+
+  margin-bottom: 3px;
+}
+
+.tech-image {
+  font-size: 5rem;
 }

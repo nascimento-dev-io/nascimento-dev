@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 
 const TechSkill = ({ skill, delay }) => {
-  const { name, url, color, image } = skill;
+  const { name, url, image, color } = skill;
 
   return (
     <li
@@ -11,9 +11,9 @@ const TechSkill = ({ skill, delay }) => {
         animationDelay: `${delay}ms`,
       }}
     >
-      <a href={url}>
+      <a href={url} target="_blank" rel="noreferrer">
         <span
-          className="tech-title "
+          className="tech-title"
           style={{
             color: "white",
             textShadow: `0 0 2px ${color}`,
