@@ -41,8 +41,6 @@ const Skills = [
   },
 ];
 
-console.log(Skills.map((skill) => skill.image));
-
 const Skill = () => {
   const refSectionSkill = useRef();
   const scrollHeight = useContext(ScrollContext);
