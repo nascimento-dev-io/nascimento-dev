@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
 import HeaderSection from "../HeaderSection/HeaderSection";
 import { ScrollContext } from "../../Context";
-
+import useMedia from "../../hooks/useMedia";
 import "./styles.css";
 import CardProject from "../CardProject/CardProject";
 
@@ -45,6 +45,7 @@ const projects = [
 const Projects = () => {
   const refSectionProject = useRef();
   const widthSlide = useRef();
+  const hideButtonsSlide = useMedia("(min-width:650px)");
 
   const scrollHeight = useContext(ScrollContext);
   const [anime, setAnime] = useState(false);
@@ -75,14 +76,16 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className="buttons">
-        <button onClick={slideMoveLeft} className="btn-prev">
-          <FaArrowCircleLeft />
-        </button>
-        <button onClick={slideMoveRight} className="btn-next">
-          <FaArrowCircleRight />
-        </button>
-      </div>
+      {hideButtonsSlide && (
+        <div className="buttons">
+          <button onClick={slideMoveLeft} className="btn-prev">
+            <FaArrowCircleLeft />
+          </button>
+          <button onClick={slideMoveRight} className="btn-next">
+            <FaArrowCircleRight />
+          </button>
+        </div>
+      )}
     </section>
   );
 };

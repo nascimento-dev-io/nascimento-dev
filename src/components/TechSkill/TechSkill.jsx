@@ -22,7 +22,7 @@ const TechSkill = ({ skill, delay }) => {
           {name}
         </span>
         <div className="tech-image" style={{ color: `${color}` }}>
-          {image}
+          <img src={image} alt={name} />
         </div>
       </a>
     </li>

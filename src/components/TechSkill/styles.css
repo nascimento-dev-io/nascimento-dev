@@ -27,5 +27,11 @@
 }
 
 .tech-image {
-  font-size: 5rem;
+  height: 80%;
+}
+
+.tech-image img {
+  width: 100%;
+
+  object-fit: cover;
 }
