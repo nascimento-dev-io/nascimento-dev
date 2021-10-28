@@ -8,6 +8,9 @@
   align-items: center;
 
   overflow: auto;
+  /* border-right: 2px solid red; */
+
+  box-shadow: 0 2px #f2220f, 0 -2px #f2220f;
 
   margin: 50px auto 10px;
 

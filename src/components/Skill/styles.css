@@ -1,15 +1,19 @@
 #skill {
   height: calc(50vh + 90px);
 }
+
+#skill .tech-descrition {
+  font-size: 1rem;
+  text-align: center;
+}
 #skill nav {
+  margin-top: 100px;
   height: 150px;
 }
 
 #skill nav ul {
   height: 100%;
   height: auto;
-
-  margin-top: 50px;
 
   display: flex;
   justify-content: space-around;

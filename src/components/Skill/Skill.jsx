@@ -54,6 +54,10 @@ const Skill = () => {
   return (
     <section id="skill" ref={refSectionSkill}>
       <HeaderSection>Tecnologias</HeaderSection>
+      <p className="tech-descrition">
+        Algumas das tecnologias nas quais possuo conhecimentos e fazem parte da
+        minha stack de aprendizado contínuo!
+      </p>
       <nav>
         {anime && (
           <ul>

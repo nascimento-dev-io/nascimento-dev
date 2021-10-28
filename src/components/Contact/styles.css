@@ -14,11 +14,11 @@
 
   opacity: 0.8;
 
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .contacts {
-  max-width: 420px;
+  width: 100%;
   height: auto;
 
   display: flex;
@@ -38,13 +38,7 @@
 
   border-radius: 5px;
 
-  opacity: 0.8;
-
   transition: 0.5s;
-}
-
-.contacts div:hover {
-  opacity: 1;
 }
 
 .contacts div a {
@@ -63,10 +57,20 @@
 
 .contacts div a svg {
   font-size: 1.5rem;
+
+  transition: 0.7s;
+}
+
+.contacts div a:hover > svg {
+  transform: rotate(90deg);
 }
 .contacts .whatsapp {
   background-color: #3dc14f;
   opacity: 0;
+}
+
+.contacts .whatsapp:hover {
+  transform: rotate(20deg);
 }
 
 .contacts .linkdin {
